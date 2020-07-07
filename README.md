@@ -1,2 +1,5 @@
 # Chat-App-Node-Socket
-Android chat application demo using node and socket
+
+This is an Android chat application demo using Node.JS + Socket.IO
+
+To run the server: node server.js
