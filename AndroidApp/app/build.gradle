@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.sabith_ak.androidapp"
+        applicationId "com.sabith_ak.chat_app"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -21,6 +21,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility '1.8'
+        targetCompatibility '1.8'
     }
 }
 
@@ -41,4 +46,7 @@ dependencies {
         exclude group: 'org.json', module: 'json'
     }
 
+}
+repositories {
+    mavenCentral()
 }

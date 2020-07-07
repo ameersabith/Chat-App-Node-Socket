@@ -1,4 +1,4 @@
-package com.sabith_ak.androidapp
+package com.sabith_ak.chat_app
 
 import android.os.Bundle
 import android.util.Log
@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
-import com.sabith_ak.androidapp.model.InitialData
-import com.sabith_ak.androidapp.model.Message
-import com.sabith_ak.androidapp.model.MessageType
-import com.sabith_ak.androidapp.model.SendMessage
+import com.sabith_ak.chat_app.model.InitialData
+import com.sabith_ak.chat_app.model.Message
+import com.sabith_ak.chat_app.model.MessageType
+import com.sabith_ak.chat_app.model.SendMessage
 import io.socket.client.IO
 import io.socket.client.Socket
 import io.socket.emitter.Emitter
@@ -42,7 +42,7 @@ class ChatActivity : AppCompatActivity() {
 
         //connect you socket client to the server
         try {
-            mSocket = IO.socket("http://add your local ip here:3000")
+            mSocket = IO.socket("http://your IP address:3000")
 
             //create connection
             mSocket.connect()
@@ -54,6 +54,9 @@ class ChatActivity : AppCompatActivity() {
 
         } catch (e: URISyntaxException) {
             e.printStackTrace();
+        }
+        catch (e: Exception){
+            e.printStackTrace()
         }
 
         btn_send_message.setOnClickListener {
@@ -87,7 +90,6 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun addItemToRecyclerView(message: Message) {
-        Log.e("UserType", message.viewType.toString())
         //Since this function is inside of the listener,
         // You need to do it on UIThread!
         runOnUiThread {

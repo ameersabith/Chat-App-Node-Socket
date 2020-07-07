@@ -1,4 +1,4 @@
-package com.sabith_ak.androidapp.model
+package com.sabith_ak.chat_app.model
 
 data class Message(
         val name: String = "",

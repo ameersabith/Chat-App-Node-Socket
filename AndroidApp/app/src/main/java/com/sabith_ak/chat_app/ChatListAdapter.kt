@@ -1,4 +1,4 @@
-package com.sabith_ak.androidapp
+package com.sabith_ak.chat_app
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.sabith_ak.androidapp.model.Message
+import com.sabith_ak.chat_app.model.Message
 
 class ChatListAdapter(
         private val context: Context,

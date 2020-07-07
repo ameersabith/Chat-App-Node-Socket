@@ -1,4 +1,4 @@
-package com.sabith_ak.androidapp
+package com.sabith_ak.chat_app
 
 import org.junit.Test
 
